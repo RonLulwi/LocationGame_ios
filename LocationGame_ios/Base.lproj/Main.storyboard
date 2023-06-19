@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocationGame_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homePage_vc" id="BYZ-38-t0r" customClass="ViewController" customModule="LocationGame_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,8 +149,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1 Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njA-4Q-txs" userLabel="Player1Name_Label">
-                                <rect key="frame" x="74" y="34" width="108" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player 1 Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njA-4Q-txs" userLabel="Player1Name_Label">
+                                <rect key="frame" x="74" y="34" width="105" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="2Wn-oL-nvh"/>
                                 </constraints>
@@ -292,25 +292,33 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Back To Menu"/>
+                                <connections>
+                                    <action selector="onBackToMenuClicked:" destination="eIC-bZ-2Nn" eventType="touchUpInside" id="WOu-R5-kNl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vb1-HL-K3l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="I7f-dR-cac" firstAttribute="top" secondItem="MVp-rf-e9c" secondAttribute="bottom" constant="51" id="4wi-Qk-VkF"/>
+                            <constraint firstItem="UUC-cT-aLU" firstAttribute="top" secondItem="vb1-HL-K3l" secondAttribute="top" constant="87" id="7Kf-zD-y7N"/>
                             <constraint firstItem="MVp-rf-e9c" firstAttribute="leading" secondItem="vb1-HL-K3l" secondAttribute="leading" constant="336" id="7xo-lJ-X3W"/>
                             <constraint firstItem="vb1-HL-K3l" firstAttribute="bottom" secondItem="I7f-dR-cac" secondAttribute="bottom" constant="97" id="J2h-2h-9Gl"/>
                             <constraint firstItem="vb1-HL-K3l" firstAttribute="trailing" secondItem="I7f-dR-cac" secondAttribute="trailing" constant="300" id="JZg-Cd-TbW"/>
                             <constraint firstItem="I7f-dR-cac" firstAttribute="leading" secondItem="vb1-HL-K3l" secondAttribute="leading" constant="302" id="KpM-1V-eSO"/>
-                            <constraint firstItem="UUC-cT-aLU" firstAttribute="leading" secondItem="vb1-HL-K3l" secondAttribute="leading" constant="304" id="T33-jy-dh8"/>
+                            <constraint firstItem="UUC-cT-aLU" firstAttribute="leading" secondItem="vb1-HL-K3l" secondAttribute="leading" constant="304" id="Q04-m0-jtm"/>
                             <constraint firstItem="MVp-rf-e9c" firstAttribute="top" secondItem="UUC-cT-aLU" secondAttribute="bottom" constant="25" id="U9S-LO-l2P"/>
-                            <constraint firstItem="UUC-cT-aLU" firstAttribute="top" secondItem="vb1-HL-K3l" secondAttribute="top" constant="87" id="atj-E4-4jZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="BackToManu_BTN" destination="I7f-dR-cac" id="Xf2-st-kTI"/>
+                        <outlet property="winnerName_Label" destination="UUC-cT-aLU" id="Bi6-6C-cDZ"/>
+                        <outlet property="winnerScore_Label" destination="MVp-rf-e9c" id="ead-hs-nGD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VhS-Xc-EVI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-777.46478873239437" y="-129.00763358778624"/>
+            <point key="canvasLocation" x="-51" y="-1582"/>
         </scene>
     </scenes>
     <resources>

@@ -61,7 +61,7 @@ class ViewController: UIViewController {
             playerName_EDT.isHidden = true
             start_BTN.isHidden = false
             
-            playerName = displayName_LBL.text!
+            playerName = playerName_EDT.text!
             saveName()
             displayName_LBL.text = "Hi, " + playerName
             if currentLat < targetLat{
